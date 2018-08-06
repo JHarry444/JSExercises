@@ -1,6 +1,9 @@
 <html>
     <script src="script.js"></script>
     <script>
-    alert("Square: " + square(2) + " Sum: " + sum(1, 2, 3));
+        var person = createPerson("test", 44, "Unemployed");
+        alert("Name: " + person.name + " Age: " + person.age + " Occupation: " + person.occupation);
+        person.age = 99;
+        alert("Name: " + person.name + " Age: " + person.age + " Occupation: " + person.occupation);
     </script>
 </html> 
