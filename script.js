@@ -45,3 +45,11 @@ function editPerson() {
     person.age = document.getElementById("age").value;
     person.occupation = document.getElementById("occupation").value;
 }
+
+function checkAge() {
+    if (person.age > 20 && person.age < 40) {
+        return true;
+    } else {
+        return false;
+    }
+}
