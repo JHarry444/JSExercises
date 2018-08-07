@@ -53,3 +53,18 @@ function checkAge() {
         return false;
     }
 }
+
+function fizzBuzz(limit, fizz, buzz) {
+        for (i = 1; i < limit; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                document.write(fizz + buzz);
+            }else if (i % 3 == 0) {
+                document.write(fizz);
+            } else if (i % 5 == 0) {
+                document.write(buzz);
+            } else {
+                document.write(i);
+            }
+            document.write("</br>");
+    } 
+}
