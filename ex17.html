@@ -1,0 +1,48 @@
+<html>
+<script src="ex17.js"></script>
+<link href="ex17.css" rel="stylesheet" type="text/css" />
+
+<body>
+    <div id="buttons">
+        <input type="button" value="New Vehicle" onclick="showFields('new');">
+        <input type="button" value="Checkout Vehicle" onclick="showFields('checkout');">
+        <input type="button" value="Show Contents" onclick="showContents();">
+        <input type="button" value="Calc Bill" onclick="showFields('bill');">
+    </div>
+    <br>
+    <div id="fields">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="vehicleReg" id="vehicleRegLabel">Vehicle Registration</label>
+                    </td>
+                    <td><input type="text" id="vehicleReg"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="vehicleType" id="vehicleTypeLabel">Vehicle Type</label>
+                    </td>
+                    <td><input type="text" id="vehicleType">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="vehicleFaults" id="vehicleFaultsLabel">Vehicle Faults</label>
+                    </td>
+                    <td> <input type="text" id="vehicleFaults">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="Submit" onclick="submit();" id="submit">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <div id="output">
+    </div>
+</body>
+</html>

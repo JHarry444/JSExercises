@@ -1,0 +1,28 @@
+#output {
+    visibility: hidden;
+    border-style: solid;
+    border-width: thin;
+    padding: 5px;
+    max-width: 20%;
+}
+
+#fields {
+    visibility: hidden;
+    width: 350px;
+}
+
+#fields > table > tbody > tr > td {
+    padding-right: 14px;
+}
+
+#output > table {
+    width: 100%;
+}
+
+#output thead {
+    text-align: left;
+}
+
+#output td {
+    width: 30%;
+}
