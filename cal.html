@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <script src="cal.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link href="cal.css" rel="stylesheet">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div id="container">
+    <div id="view">
+        <p id="jordanshutup" readonly></p>
+    </div>
+    <div id="calculator">
+        <input type="button" onclick="add(this.value);" value="1">
+        <input type="button" onclick="add(this.value);" value="2">
+        <input type="button" onclick="add(this.value);" value="3">
+        <input type="button" onclick="clearCalculator();" value="C">
+        <input type="button" onclick="add(this.value);" value="4">
+        <input type="button" onclick="add(this.value);" value="5">
+        <input type="button" onclick="add(this.value);" value="6">
+         <input type="button" onclick="add(this.value);" value="+">
+        <input type="button" onclick="add(this.value);" value="7">
+        <input type="button" onclick="add(this.value);" value="8">
+        <input type="button" onclick="add(this.value);" value="9">       
+        <input type="button" onclick="add(this.value);" value="-">
+        <input type="button" onclick="add(this.value);" value="/">
+        <input type="button" onclick="add(this.value);" value="0">
+        <input type="button" onclick="add(this.value);" value="*">
+        <input type="button" onclick="add(this.value);" value="**">
+        <input type="button" onclick="add(this.value);" value="(">
+        <input type="button" onclick="add(this.value);" value=")">
+        <input type="button" onclick="backSpace();" value="BS">
+        <input type="button" onclick="workit(); return false;" value="=">
+    </div>
+    </div>
+</body>
+
+</html>

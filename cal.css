@@ -1,0 +1,24 @@
+#calculator {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 300px;
+    top: 40px;
+    position: absolute;
+}
+
+#jordanshutup {
+    border-style: inset;
+    height: 20px;
+    overflow: hidden;
+} 
+
+#container {
+    border-style: solid;
+    height: 136px;
+    width: 300px;
+}
+
+ #view {
+    position: relative;
+    top: -15px;
+} 

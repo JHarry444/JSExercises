@@ -1,5 +1,6 @@
-var operation = "";
-var vehicles = [];
+"use strict";
+let operation = "";
+let vehicles = [];
 
 function showFields(currentOperation) {
     operation = currentOperation;
@@ -18,25 +19,15 @@ function showFields(currentOperation) {
     }
 }
 
-function checkExists(vehicle) {
-    for (i = 0; i < vehicles.length; i++) {
-        if (vehicles[i].reg == vehicle.reg) {
-            return true;
-        }
-    }
-    return false;
-}
-
 function submit() {
     if (operation == "new") {
-        var newVehicle = new Object();
+        let newVehicle = new Object();
         newVehicle.reg = document.getElementById("vehicleReg").value;
         newVehicle.type = document.getElementById("vehicleType").value;
         newVehicle.faults = document.getElementById("vehicleFaults").value.split(",");
-        if (newVehicle.reg.trim() != "" && !checkExists(newVehicle)) {
+        if (newVehicle.reg.trim() != "" && !vehicles.find(a => a.reg === newVehicle.reg)) {
             vehicles.push(newVehicle);
         }
-
     } else if (operation == "checkout") {
         vehicles.splice(vehicles.findIndex(checkReg), 1);
     } else if (operation == "bill") {
@@ -46,11 +37,9 @@ function submit() {
 }
 
 function calcBill(vehicle) {
-    var price = 5;
-    for (i = 0; i < vehicle.faults.length; i++) {
-        price *= price;
-    }
-    document.getElementById("output").innerHTML = "<p>Reg: " + vehicle.reg + "</p><p>Price: " + price + "</p>";
+    let price = 5;
+    price **= vehicle.faults.length;
+    document.getElementById("output").innerHTML = `<p>Reg: ${vehicle.reg}</p><p>Price: ${price}</p>`;
     document.getElementById("output").style.visibility = "visible";
 }
 
@@ -72,10 +61,8 @@ function hideFields() {
 
 function showContents() {
     document.getElementById("output").style.visibility = "visible";
-    var innerHTML = "<table border='1'><thead><th>Reg</th><th>Type</th><th>Faults</th></thead><tbody>";
-    for (i = 0; i < vehicles.length; i++) {
-        innerHTML += "<tr><td>" + vehicles[i].reg + "</td><td>" + vehicles[i].type + "</td><td>" + vehicles[i].faults + "</td></tr>"
-    }
+    let innerHTML = "<table border='1'><thead><th>Reg</th><th>Type</th><th>Faults</th></thead><tbody>";
+    vehicles.forEach(a => innerHTML += `<tr><td>${a.reg}</td><td> ${a.type} </td><td> ${a.faults} </td></tr>`);
     innerHTML += "</tbody></table>";
     document.getElementById("output").innerHTML = innerHTML;
 }
